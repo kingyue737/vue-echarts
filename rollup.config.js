@@ -86,5 +86,20 @@ export default [
         format: "esm"
       }
     ]
+  },
+  {
+    input: "src/nuxt/index.ts",
+    plugins: [esbuild(), dts()],
+    output: [
+      {
+        file: "dist/nuxt/index.js",
+        format: "esm",
+        sourcemap: true
+      },
+      {
+        file: "dist/nuxt/index.d.ts",
+        format: "esm"
+      }
+    ]
   }
 ];

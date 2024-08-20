@@ -450,7 +450,19 @@ import { THEME_KEY } from 'vue-echarts'
 
 静态方法请直接通过 [`echarts` 本身](https://echarts.apache.org/zh/api.html#echarts)进行调用。
 
+## Nuxt
 
+将 `vue-echarts/nuxt` 添加到 `nuxt.config` 中的 `modules` 中：
+
+```ts
+export default defineNuxtConfig({
+  modules: [
+    'vue-echarts/nuxt',
+  ]
+})
+```
+
+组件 `<VChart>` 和 injetion keys 是 [自动导入](https://nuxt.com/docs/guide/concepts/auto-imports)的。你不必手动导入它们。
 
 ## CSP: `style-src` 或 `style-src-elem`
 

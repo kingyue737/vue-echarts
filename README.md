@@ -450,6 +450,20 @@ import { THEME_KEY } from 'vue-echarts'
 
 Static methods can be accessed from [`echarts` itself](https://echarts.apache.org/en/api.html#echarts).
 
+## Nuxt
+
+Add `vue-echarts/nuxt` to `modules` in your `nuxt.config`:
+
+```ts
+export default defineNuxtConfig({
+  modules: [
+    'vue-echarts/nuxt',
+  ]
+})
+```
+
+The Vue component `<VChart>` and injection keys are [auto-imported](https://nuxt.com/docs/guide/concepts/auto-imports). You don't have to import them.
+
 ## CSP: `style-src` or `style-src-elem`
 
 If you are applying a CSP to prevent inline `<style>` injection, you need to use `vue-echarts/csp` instead of `vue-echarts` and include `vue-echarts/csp/style.css` manually.
